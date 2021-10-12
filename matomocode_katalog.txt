@@ -1,5 +1,3 @@
-
-
 <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
@@ -19,4 +17,3 @@
 </script>
 <noscript><p><img src="//matomo.computer-extra.de/matomo.php?idsite=5&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
-
