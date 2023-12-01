@@ -1,15 +1,14 @@
-name: remote ssh command
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
-  build:
-    name: Build
+  run_pull:
+    name: run pull
     runs-on: ubuntu-latest
+
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: ls
+    - name: connect and pull
+      run: ssh ${{ secrets.USERNAME }}:${{ secrets.PASSWORD }}@${{ secrets.HOST }} "ls"
